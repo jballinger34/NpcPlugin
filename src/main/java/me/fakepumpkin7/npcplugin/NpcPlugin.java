@@ -20,7 +20,8 @@ import java.util.UUID;
 
 public final class NpcPlugin extends JavaPlugin {
 
-    //need to add skin
+    // below, the commented out function createNpcTest
+    // shows how to spawn an NPC
 
 
 
@@ -48,7 +49,7 @@ public final class NpcPlugin extends JavaPlugin {
     }
 
 
-
+/*
     public void createNpcTest(){
         Location location = new Location(Bukkit.getWorlds().get(0),0,100,0);
         String name = "TEST";
@@ -64,6 +65,7 @@ public final class NpcPlugin extends JavaPlugin {
         NPC test2 = new NPC(name2, location2, command2);
         this.NpcList.add(test2);
     }
+    */
 
     public void showAllNpc(EntityPlayer entityPlayer, Location location) {
         PacketPlayOutPlayerInfo playerInfoAdd = new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, entityPlayer);
