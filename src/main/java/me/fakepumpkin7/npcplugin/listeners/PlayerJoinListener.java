@@ -26,6 +26,7 @@ public class PlayerJoinListener implements Listener {
         for (NPC npc : plugin.NpcList) {
             Bukkit.getOnlinePlayers().forEach(player -> ((CraftPlayer) player).getHandle().playerConnection.sendPacket(new PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, npc)));
             plugin.showAllNpc(npc, npc.getLocation());
+            //shows each npc to each player
         }
     }
 }
