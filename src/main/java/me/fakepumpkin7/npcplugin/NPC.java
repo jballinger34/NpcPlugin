@@ -2,15 +2,13 @@ package me.fakepumpkin7.npcplugin;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import me.fakepumpkin7.npcplugin.netutil.TutNetHandler;
-import me.fakepumpkin7.npcplugin.netutil.TutNetworkManager;
+import me.fakepumpkin7.npcplugin.netutil.NpcNetHandler;
+import me.fakepumpkin7.npcplugin.netutil.NpcNetworkManager;
 import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
 import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
-import org.bukkit.entity.Player;
 
 import java.util.UUID;
 
@@ -25,7 +23,7 @@ public class NPC extends EntityPlayer {
     }
 
     private void handleConnection() {
-        this.playerConnection = new TutNetHandler(((CraftServer) Bukkit.getServer()).getServer(), new TutNetworkManager(EnumProtocolDirection.CLIENTBOUND), this);
+        this.playerConnection = new NpcNetHandler(((CraftServer) Bukkit.getServer()).getServer(), new NpcNetworkManager(EnumProtocolDirection.CLIENTBOUND), this);
     }
     private void addToWorldInPos(Location loc){
         this.setPositionRotation(loc.getX(), loc.getY(), loc.getZ(), loc.getYaw(), loc.getPitch());
