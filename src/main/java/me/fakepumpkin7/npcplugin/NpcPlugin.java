@@ -40,7 +40,7 @@ public final class NpcPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this),this);
 
 
-        createNpcTest();
+        //createNpcTest();
     }
 
     @Override
