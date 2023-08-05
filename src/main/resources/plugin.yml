@@ -1,0 +1,7 @@
+name: NpcPlugin
+version: '${project.version}'
+main: me.fakepumpkin7.npcplugin.NpcPlugin
+commands:
+  spawnnpc:
+    description: spawn an NPC
+    usage: /spawn <args>
